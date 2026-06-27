@@ -334,6 +334,20 @@ Coordination, registration, and maintenance of the known-node list are proposed 
 2. **Request test-site licences.** From the close of the comment period onward, we will apply for a small number of **unmanned-station (repeater) authorisations** for initial test sites (see [Section 10](#10-licensing-and-unmanned-station-status)).
 3. **Deploy and evaluate.** Once the test sites are licensed and on the air, the project will be evaluated on how it performs and evolves in practice — coverage, interference, traffic and congestion behaviour, and node density — and this RFC will be revised accordingly before any wider roll-out.
 
+### 13.2 Initial test-bed nodes
+
+The following stations are planned to form the initial test bed, operating on the proposed **430.500 MHz** channel with the on-air mode defined in [Section 5.1](#51-on-air-radio-settings-the-testable-mode):
+
+- ON0BXL
+- ON0VDS
+- ON0ORA
+- ON0AND
+- ON0OST
+- ON0UHF
+- ON0VHF
+
+Each will be brought up as a licensed unmanned station (see [Section 10](#10-licensing-and-unmanned-station-status)) and registered on the overarching [ON0.be](https://on0.be) platform. Results from these nodes will drive the evaluation described in [Section 13.1](#131-comment-period-and-next-steps).
+
 ---
 
 ## 14. Why a dedicated amateur frequency helps with BIPT/IBPT
