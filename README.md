@@ -32,9 +32,10 @@ MeshCore and similar LoRa-based mesh systems are becoming increasingly popular a
 6. Uncoordinated high-site LoRa nodes on 433 MHz or 868 MHz can create avoidable interference and regulatory confusion.
 7. A fragmented situation may later create problems with BIPT/IBPT if amateur stations are seen to be operating in licence-free spectrum as if it were an amateur allocation.
 
-A technical and regulatory background note was published by RF.Guru in April 2026:
+Technical and regulatory background notes have been published by RF.Guru:
 
-- <https://shop.rf.guru/pages/meshtastic-meshcore-868-mhz-and-the-ham-radio-trap>
+- "Meshtastic, MeshCore, 868 MHz, and the Ham Radio Trap" (April 2026) — <https://shop.rf.guru/pages/meshtastic-meshcore-868-mhz-and-the-ham-radio-trap>
+- "Meshtastic, MeshCore, CE Marking, and the Hardware Trap" (updated July 2026) — <https://shop.rf.guru/pages/meshtastic-meshcore-ce-marking-and-the-hardware-trap>. CE marking of a LoRa board as SRD/ISM equipment does not make it compliant for amateur use; regulatory compliance depends on the complete system (antenna, firmware, power, duty cycle), not the certification of individual components.
 
 The main conclusion is that if radio amateurs want to build a ham-only mesh network, the cleaner solution is to do it inside the amateur service, under amateur-radio rules, with callsign identification, no encryption, coordinated frequencies, and responsible technical limits.
 
@@ -508,6 +509,8 @@ This approach gives radio amateurs across Region 1 a coordinated, technically de
   <https://www.bipt.be/consumers/radio-frequencies/private-use-hobby/radioamateurs>
 - **RF.Guru technical note: "Meshtastic, MeshCore, 868 MHz, and the Ham Radio Trap"**
   <https://shop.rf.guru/pages/meshtastic-meshcore-868-mhz-and-the-ham-radio-trap>
+- **RF.Guru technical note: "Meshtastic, MeshCore, CE Marking, and the Hardware Trap"** — CE/RED compliance of consumer LoRa hardware vs amateur use
+  <https://shop.rf.guru/pages/meshtastic-meshcore-ce-marking-and-the-hardware-trap>
 - **IARU Region 1 VHF/UHF/Microwaves Committee (C5) and VHF Managers Handbook**
   <https://www.iaru-r1.org/about-us/committees-and-working-groups/vhf-uhf-shf-committee-c5/>
   Handbook v10.02 (Nov 2024): <https://www.iaru-r1.org/wp-content/uploads/2024/11/VHF_Handbook_V10_02.pdf>
