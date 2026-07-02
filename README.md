@@ -30,7 +30,7 @@ MeshCore and similar LoRa-based mesh systems are becoming increasingly popular a
 4. Radio amateurs may incorrectly assume that using a callsign or amateur purpose automatically makes ISM/SRD operation "amateur radio".
 5. Many amateurs already transmit their callsign on 868 MHz (and on 433 MHz), which is explicitly not permitted: callsign identification is strictly an amateur-band operating practice and has no place on ISM/SRD spectrum. Adding a callsign to an ISM/SRD transmission does not make it amateur radio — it simply puts non-compliant identification onto a licence-free band.
 6. Uncoordinated high-site LoRa nodes on 433 MHz or 868 MHz can create avoidable interference and regulatory confusion.
-7. A fragmented situation may later create problems with BIPT/IBPT if amateur stations are seen to be operating in licence-free spectrum as if it were an amateur allocation.
+7. A fragmented situation may later create problems with BIPT/IBPT or any national regulator if amateur stations are seen to be operating in licence-free spectrum as if it were an amateur allocation.
 
 Technical and regulatory background notes have been published by RF.Guru:
 
@@ -177,7 +177,7 @@ Reasons:
 5. The standard European LoRa-APRS frequency, **433.775 MHz** (125 kHz, SF12), is already in active use, and Europe has the densest LoRa-APRS network in the world. A MeshCore deployment in the 433 MHz area would conflict directly with this existing traffic.
 6. Long-range high-site amateur nodes may create conflicts with licence-free users.
 7. Some parts of the 433 MHz area overlap with IARU Region 1 repeater input/output planning.
-8. Using 433 MHz for ham-only infrastructure risks creating confusion with BIPT/IBPT if radio amateurs appear to be using ISM/SRD spectrum as an amateur allocation.
+8. Using 433 MHz for ham-only infrastructure risks creating confusion with any national regulator if radio amateurs appear to be using ISM/SRD spectrum as an amateur allocation.
 
 The LoRa-APRS conflict deserves particular attention. Most LoRa-APRS stations are iGates (which receive permanently) and position trackers; some also relay APRS text messages. All of these would be disrupted by, or interfere with, a co-channel MeshCore network. These LoRa-APRS devices generally operate at low power (typically below 0.5 W / ~500 mW) and with a much lower duty cycle than a typical MeshCore mesh, so a chattier MeshCore deployment would be a disproportionate interferer to the existing LoRa-APRS users.
 
@@ -197,7 +197,7 @@ Reasons:
 4. Higher-gain antennas and high-site infrastructure can create regulatory ambiguity.
 5. Amateur callsign identification does not automatically convert SRD operation into amateur-radio operation. On the contrary, transmitting a callsign on 868 MHz is explicitly forbidden — callsign usage belongs strictly on amateur bands, not on ISM/SRD spectrum.
 6. Encryption, private messaging, and consumer-device behaviour may conflict with amateur-radio expectations.
-7. A growing number of uncoordinated 868 MHz nodes could later create avoidable issues with BIPT/IBPT.
+7. A growing number of uncoordinated 868 MHz nodes could later create avoidable issues with any national regulator.
 
 For these reasons, this RFC proposes that ham-only infrastructure should be moved into the amateur 70 cm band, where amateur-radio identification, coordination, and operating practice can be applied properly.
 
@@ -258,7 +258,7 @@ A MeshCore mesh is built from relay/repeater nodes. Any fixed node that retransm
 
 Key consequences:
 
-1. **A personal amateur licence is not sufficient.** A personal amateur licence (e.g. HAREC) authorises _you_ to operate a station under your direct control. It does not, on its own, authorise an unattended automatic relay. Every fixed MeshCore repeater/relay node therefore requires a separate **unmanned-station / repeater authorisation** — in Belgium, from BIPT/IBPT — before it may operate.
+1. **A personal amateur licence is not sufficient.** A personal amateur licence (e.g. HAREC) authorises _you_ to operate a station under your direct control. It does not, on its own, authorise an unattended automatic relay. Every fixed MeshCore repeater/relay node therefore requires a separate **unmanned-station / repeater authorisation** from the national regulator (in Belgium, BIPT/IBPT) before it may operate.
 2. **The mesh is single-frequency and mesh-based.** Because MeshCore is mesh-based, every relaying node receives and re-transmits on the _same_ coordinated frequency; there is no separate input/output pair as on an FM repeater. All licensed nodes share one channel — see [Section 3](#3-how-lora-and-meshcore-work-on-the-air).
 3. **Register every licensed node.** Each authorised unmanned node and its responsible operator should be registered nationally, so the node list stays coordinated — see [Section 13](#13-coordination-proposal).
 4. **Attended portable/handheld nodes** operated under the direct control of a licensed amateur are not unmanned stations and fall under the normal personal licence. However, a portable node configured to relay automatically takes on repeater behaviour and should be treated accordingly.
@@ -406,7 +406,7 @@ Each will be brought up as a licensed unmanned station (see [Section 10](#10-lic
 
 ---
 
-## 14. Why a dedicated amateur frequency helps with BIPT/IBPT
+## 14. Why a dedicated amateur frequency helps with national regulators
 
 A dedicated and coordinated amateur-band frequency helps prevent future regulatory problems.
 
@@ -420,7 +420,7 @@ By proposing a coordinated 70 cm amateur channel, the amateur-radio community ca
 - avoiding unnecessary use of ISM/SRD spectrum for amateur infrastructure;
 - documenting technical parameters;
 - keeping the system ham-only and non-encrypted;
-- reducing the risk of later BIPT/IBPT complaints or enforcement discussions.
+- reducing the risk of later regulator complaints or enforcement discussions.
 
 This is a proactive coordination effort, not a reaction to a problem.
 
@@ -503,7 +503,7 @@ This approach gives radio amateurs across Region 1 a coordinated, technically de
   Direct 70 cm (UHF) band plan: <https://www.iaru-r1.org/wp-content/uploads/2021/03/UHF-Bandplan.pdf>
 - **LoRa-APRS — project and default frequency settings (433.775 MHz, Europe)**
   <https://lora-aprs.org/>
-- **BIPT / IBPT radio amateur information**
+- **National regulator — radio amateur information (example: BIPT/IBPT, Belgium)**
   <https://www.bipt.be/consumers/radio-frequencies/private-use-hobby/radioamateurs>
 - **RF.Guru technical note: "Meshtastic, MeshCore, 868 MHz, and the Ham Radio Trap"**
   <https://shop.rf.guru/pages/meshtastic-meshcore-868-mhz-and-the-ham-radio-trap>
